@@ -12,7 +12,7 @@
       // TODO: use Material bar chart, simplify loading, simplify tooltip by using role:tooltip instead of callback
       // var scr = document.createElement("script");
       // scr.setAttribute("src",'https://www.google.com/jsapi?autoload={"modules":[{"name":"visualization","version":"1","packages":["corechart"],"callback":"drawVisualization"}]}');
-      google.charts.load('current', {packages: ['corechart', 'bar']});
+      google.charts.load('current', {{"modules":[{"name":"visualization","version":"1", packages: ['corechart', 'bar']});
       google.charts.setOnLoadCallback(drawVisualization);
       
  function drawVisualization() {
