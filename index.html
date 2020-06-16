@@ -15,10 +15,11 @@
       google.charts.load('current', {packages: ['corechart', 'bar']});
       google.charts.setOnLoadCallback(drawVisualization);
       
-      function drawVisualization() {
+ function drawVisualization() {
         // To edit the data that this visualization uses: https://docs.google.com/spreadsheets/d/1qRQbDVlRXrH4g8wcgZai65Zjn7D3N1mL-rIIzUoXmlk/edit
         var query = new google.visualization.Query(
-          'http://spreadsheets.google.com/tq?key=0ArBFygWDV2_PdF9BOUx2N3hyZldRVG1KT0tBcm9Dbmc&range=B1:N48');
+          'https://docs.google.com/spreadsheets/d/1qRQbDVlRXrH4g8wcgZai65Zjn7D3N1mL-rIIzUoXmlk/gviz/tq?range=B1:N48');
+          // was 'http://spreadsheets.google.com/tq?key=0ArBFygWDV2_PdF9BOUx2N3hyZldRVG1KT0tBcm9Dbmc&range=B1:N48', changed 2020-05-21
         // Send the query with a callback function.
         query.send(handleQueryResponse);
       }
@@ -45,11 +46,11 @@
         var options = {
           width: 660, height: 740,
           theme: 'maximized', 
-          bar: {groupWidth: "80%"},
+          bar: {groupWidth: "85%"},
           legend: {position: 'none'},
           hAxis: {viewWindow: {min: 1998, max: 2024}, viewWindowMode: 'explicit', gridlines: {count: 13},
                   format: '####', textStyle: {fontFamily: "RobotoRegular, Arial", fontSize: 12}},
-          vAxis: {textStyle: {fontFamily: "RobotoRegular, Arial"}}, // bold: true
+          vAxis: {textStyle: {fontFamily: "RobotoRegular, Arial", fontSize: 12}}, // bold: true
           colors: ['white','#f04e23'], // START bar rendered with the background color
           focusTarget: 'category',
           tooltip: {isHtml: true}, // render tooltips using HTML not SVG
