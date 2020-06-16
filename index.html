@@ -12,17 +12,13 @@
       // TODO: use Material bar chart, simplify loading, simplify tooltip by using role:tooltip instead of callback
       // var scr = document.createElement("script");
       // scr.setAttribute("src",'https://www.google.com/jsapi?autoload={"modules":[{"name":"visualization","version":"1","packages":["corechart"],"callback":"drawVisualization"}]}');
-
-
-
-
-google.charts.load('current', {packages: ['corechart', 'bar']});
-google.charts.setOnLoadCallback(drawVisualization);
+      google.charts.load('current', {packages: ['corechart', 'bar']});
+      google.charts.setOnLoadCallback(drawVisualization);
       
       function drawVisualization() {
         // To edit the data that this visualization uses: https://docs.google.com/spreadsheets/d/1qRQbDVlRXrH4g8wcgZai65Zjn7D3N1mL-rIIzUoXmlk/edit
         var query = new google.visualization.Query(
-          'http://spreadsheets.google.com/tq?key=0ArBFygWDV2_PdF9BOUx2N3hyZldRVG1KT0tBcm9Dbmc&range=B1:N47');
+          'http://spreadsheets.google.com/tq?key=0ArBFygWDV2_PdF9BOUx2N3hyZldRVG1KT0tBcm9Dbmc&range=B1:N48');
         // Send the query with a callback function.
         query.send(handleQueryResponse);
       }
